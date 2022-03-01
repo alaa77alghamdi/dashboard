@@ -12,6 +12,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
 </head>
@@ -20,37 +21,19 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Nrt Solution</a>
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                
+                </button>
+                
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -64,59 +47,165 @@
     <div>
         <div>
             <nav>
-                <h1 mt-3> Dashboard</h1>
+                <h1> Dashboard</h1>
             </nav>
         </div>
 
         <!-- The Main Content -->
         <div>
 
+
+            <div class="offcanvas offcanvas-start bg-purple" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul>
+                        <li> Home </li>
+                        <li>Products</li>
+                    </ul>
+                </div>
+            </div>
             <main>
                 <div class="container">
                     <div class="row align-items-start">
-                        <div class="col mt-3">
+                        <div class="col-md-3 col-sm-6 mt-3">
                             <div class="card bg-pink">
                                 <div class="card-body">
                                     Sales
                                 </div>
-                                <div class="card-footer">more</div>
+                                <div class="card-footer">
+                                    <p class="fs-6">View details</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div class="col-md-3 col-sm-6 mt-3">
                             <div class="card bg-pink">
                                 <div class="card-body">
-                                    Sales
+                                    Orders
                                 </div>
-                                <div class="card-footer">more</div>
+                                <div class="card-footer">
+                                    <p class="fs-6">View details</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div class="col-md-3 col-sm-6 mt-3">
                             <div class="card bg-pink">
                                 <div class="card-body">
-                                    Sales
+                                    Vistitor
                                 </div>
-                                <div class="card-footer">more</div>
+                                <div class="card-footer">
+                                    <p class="fs-6">View details</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col mt-3">
+                        <div class="col-md-3 col-sm-6 mt-3">
                             <div class="card bg-pink">
                                 <div class="card-body">
-                                    Sales
+                                    Conversion Rate
                                 </div>
-                                <div class="card-footer">more</div>
+                                <div class="card-footer">
+                                    <p class="fs-6">View details</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Reports Chart -->
+
+
+                    <div class="container">
+                        <div class="row align-items-start">
+                        </div>
+                        <div class="row">
+                            <div class="col mt-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-border-all" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 0h16v16H0V0zm1 1v6.5h6.5V1H1zm7.5 0v6.5H15V1H8.5zM15 8.5H8.5V15H15V8.5zM7.5 15V8.5H1V15h6.5z" />
+                                        </svg> orders
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart1" width="200" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mt-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                            <path
+                                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                        </svg> Vistitor
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart2" width="200" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mt-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                        </svg> Vistitor Cities
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart3" width="200" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mt-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg> Customer Rate
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart4" width="200" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!-- Customers Table -->
             </main>
 
             <!-- Customers Table -->
             <footer>
+
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col mt-5">
+                            <div class="card">
+                                <div class="car-header">Customers</div>
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
