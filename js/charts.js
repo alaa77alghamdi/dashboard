@@ -4,12 +4,12 @@ var ordersChart = document.getElementById("myAreaChart");
 
 const ctx = document.getElementById('myChart1').getContext('2d');
 const myChart1 = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Aug 1', 'Aug 3', 'Aug 5', 'Aug 7', 'Aug 9', 'Aug 11', 'Aug 13'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [0,10000, 20000, 30000, 40000],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -26,7 +26,7 @@ const myChart1 = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -48,10 +48,10 @@ const ctx2 = document.getElementById('myChart2').getContext('2d');
 const myChart2 = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June','July','August','September','October','November','December'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [0, 5000, 10000, 150000],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -86,7 +86,7 @@ const ctx3 = document.getElementById('myChart3').getContext('2d');
 const myChart3 = new Chart(ctx3, {
     type: 'pie',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Riyadh', 'Jeddah', 'Shrqia', 'Mecca'],
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
